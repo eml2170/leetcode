@@ -1,0 +1,9 @@
+def containsDuplicate(self, nums: List[int]) -> bool:;"<pre>
+    return len(nums) != len(set(nums))
+</pre>"
+def twoSum(self, nums: List[int], target: int) -> List[int]:;"<pre>
+    nums_set = {num: idx for num, idx in zip(nums, range(len(nums)))}
+    for i, num in enumerate(nums):
+        if target - num in nums_set and i != nums_set[target-num]:
+            return [i, nums_set[target - num]]
+</pre>"
