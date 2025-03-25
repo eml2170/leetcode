@@ -119,3 +119,18 @@ def move_zeros_in_place(nums: list[int]) -> None:
             nums[l], nums[r] = nums[r], nums[l]
             l += 1
         r += 1
+
+
+# https://leetcode.com/problems/is-subsequence/description/
+def is_subsequence(s: str, t: str) -> bool:
+    j = 0
+    for i in range(len(s)):
+        c = s[i]
+        while j < len(t) and t[j] != c:
+            j += 1
+
+        if j >= len(t):
+            return False
+        else:
+            j += 1
+    return True
