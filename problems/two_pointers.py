@@ -19,17 +19,19 @@ def isPalindrome(s: str) -> bool:
         end -= 1
     return True
 
+
 # https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 def twoSumNoSpace(numbers: list[int], target: int) -> list[int]:
     i, j = 0, len(numbers) - 1
     while i < j:
         sum_ij = numbers[i] + numbers[j]
         if sum_ij == target:
-            return [i,j]
+            return [i, j]
         elif sum_ij < target:
             i += 1
         else:
             j -= 1
+
 
 # https://leetcode.com/problems/3sum/
 def threeSum(nums: list[int]) -> list[list[int]]:
@@ -67,6 +69,7 @@ def threeSum(nums: list[int]) -> list[list[int]]:
                 start += 1
                 end -= 1
     return res
+
 
 # https://leetcode.com/problems/3sum-closest/
 def threeSumClosest(nums: list[int], target: int) -> int:
@@ -106,6 +109,7 @@ def maxArea(height: list[int]) -> int:
         else:
             r -= 1
     return max_area
+
 
 # https://leetcode.com/problems/move-zeroes/
 def move_zeros_in_place(nums: list[int]) -> None:
