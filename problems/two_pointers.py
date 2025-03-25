@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/valid-palindrome/submissions/
-def isPalindrome(s: str) -> bool:
+def is_palindrome(s: str) -> bool:
     # O(n) space
     # cleaned = list(filter(lambda x: x.isalnum(), s.lower()))
     # return cleaned == cleaned[::-1]
@@ -21,7 +21,7 @@ def isPalindrome(s: str) -> bool:
 
 
 # https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-def twoSumNoSpace(numbers: list[int], target: int) -> list[int]:
+def two_sum_no_space(numbers: list[int], target: int) -> list[int]:
     i, j = 0, len(numbers) - 1
     while i < j:
         sum_ij = numbers[i] + numbers[j]
@@ -34,7 +34,7 @@ def twoSumNoSpace(numbers: list[int], target: int) -> list[int]:
 
 
 # https://leetcode.com/problems/3sum/
-def threeSum(nums: list[int]) -> list[list[int]]:
+def three_sum(nums: list[int]) -> list[list[int]]:
     res = []
     nums.sort()
     for i in range(len(nums) - 1):
@@ -72,7 +72,7 @@ def threeSum(nums: list[int]) -> list[list[int]]:
 
 
 # https://leetcode.com/problems/3sum-closest/
-def threeSumClosest(nums: list[int], target: int) -> int:
+def three_sum_closest(nums: list[int], target: int) -> int:
     nums.sort()
 
     min_delta = float("inf")
@@ -96,7 +96,7 @@ def threeSumClosest(nums: list[int], target: int) -> int:
 
 
 # https://leetcode.com/problems/container-with-most-water/
-def maxArea(height: list[int]) -> int:
+def max_area(height: list[int]) -> int:
     l, r = 0, len(height) - 1
     max_area = 0
     while l < r:
